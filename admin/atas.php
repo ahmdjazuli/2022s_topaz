@@ -74,6 +74,7 @@
             <li><a href="transaksi.php"><i class="fa fa-cubes fa-fw"></i> Barang Keluar</a> </li>
             <li> <a href="service.php"><i class="fa fa-connectdevelop fa-fw"></i> Transaksi Service</a> </li>
             <li> <a href="proses.php"><i class="fa fa-clock-o fa-fw"></i> Proses Service</a> </li>
+            <li> <a href="sparepart.php"><i class="fa fa-flag fa-fw"></i> Pemesanan Sparepart</a> </li>
             <li> <a href="report.php"><i class="fa fa-file-o fa-fw"></i> Service Report</a> </li>
             <li> <a href="jadwal.php"><i class="fa fa-random fa-fw"></i> Jadwal Maintenance</a> </li>
             <li> <a href="gaji.php"><i class="fa fa-money fa-fw"></i> Gaji Karyawan</a> </li>
@@ -82,7 +83,7 @@
             <li><a href="pendapatan1.php"><i class="fa fa-euro fa-fw"></i> Pendapatan Bulanan</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-tasks fa-fw"></i> Laporan (10)<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-tasks fa-fw"></i> Laporan (11)<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="masuk.php">Barang Masuk</a> </li>
                     <li><a href="qc.php">Quality Check</a> </li>
@@ -90,6 +91,7 @@
                     <li> <a href="gaji.php">Gaji Karyawan</a> </li>
                     <li> <a href="service.php">Transaksi Service (+nota)</a> </li>
                     <li> <a href="proses.php">Proses Service</a> </li>
+                    <li> <a href="sparepart.php">Pemesanan Sparepart</a> </li>
                     <li> <a href="report.php">Service Report</a> </li>
                     <li> <a href="jadwal.php">Jadwal Maintenance</a> </li>
                     <li><a href="pendapatan2.php">Pendapatan Harian</a> </li>

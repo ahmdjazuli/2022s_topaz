@@ -48,6 +48,10 @@
 	}else if (isset($_GET['notransaksi']) AND $_GET['m'] == 'keluar') {
 		mysqli_query($kon, "DELETE FROM transaksi WHERE notransaksi='$_REQUEST[notransaksi]'");
 		?> <script>window.location='transaksi.php';</script> <?php
+	// sparepart
+	}else if (isset($_GET['idsparepart'])) {
+		mysqli_query($kon, "DELETE FROM sparepart WHERE idsparepart='$_REQUEST[idsparepart]'");
+		?> <script>window.location='sparepart.php';</script> <?php
 	// jadwal
 	}
 ?>

@@ -6,7 +6,7 @@
     		<div class="racing_shoes">
     			<div class="row">
     				<div class="col-md-7">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15930.53596313815!2d114.8396203!3d-3.4388987!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbcd2c24e4330751!2sCV.%20TWINCOM%20SALES%20%26%20SERVICE%20CENTER!5e0!3m2!1sid!2sid!4v1629497803901!5m2!1sid!2sid" width="600" height="510" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3514128947713!2d106.9234647!3d-6.2173039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698ddef4a1c029%3A0xd9ee775c54a75c84!2sPT%20RAFA%20Topaz%20Utama!5e0!3m2!1sid!2ssg!4v1655429516711!5m2!1sid!2ssg" width="600" height="510" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     				</div>
     				<div class="col-md-5">
     					<div class="sale_text"><strong>Jl. Panglima Batur <br><span style="color: #0a0506;">Timur </span> <br>RT. 02 RW.01 </strong><br><span style="color:black">Ruko No. 6 </span></div>

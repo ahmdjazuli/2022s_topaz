@@ -9,11 +9,11 @@ require "../kon.php";
 	}
 
 	if(mysqli_num_rows($result)==0){
-    ?> <script>alert('Data Tidak Ditemukan');window.location='../admin/gaji.php'</script> <?php
+    ?> <script>alert('Data Tidak Ditemukan');window.location='../admin/proses.php'</script> <?php
   }
 ?>
 <?php require('atas.php') ?>
-<style type="text/css" media="print"> @page { size: portrait; } </style>
+<style type="text/css" media="print"> @page { size: landscape; } </style>
 <h2 style="text-align: center;">Laporan Proses Service</h2>
 <h4 style="text-align: center;">
 	<?php 
@@ -34,6 +34,7 @@ require "../kon.php";
         <th>No Transaksi</th>
         <th>Waktu (WITA)</th>
         <th>Keterangan</th>
+        <th>Biaya (Rp)</th>
       </tr>
     </thead>
 <?php 
@@ -45,6 +46,7 @@ while( $data = mysqli_fetch_array($result) ) :
   	<td><?= $data['notransaksi'] ?></td>
     <td><?= date('d/m/Y,H:i',strtotime($data['waktu'])) ?></td>
     <td><?= $data['ket'] ?></td>
+    <td><?= number_format($data['biaya'],0,'.','.') ?></td>
 </tr>
 <?php endwhile; ?>
   </table>

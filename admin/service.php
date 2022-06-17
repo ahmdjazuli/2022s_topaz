@@ -105,7 +105,13 @@
                                                         <?php }else{ ?>
                                                             <a href="proses_input.php?notransaksi=<?php echo $data['notransaksi']; ?>" class="btn btn-success btn-sm">Proses</a><?php
                                                         } ?></td>
-                                                    <td><?= number_format($data['biaya'],0,'.','.') ?></td>
+                                                    <td><?php
+                                                    $kuku = mysqli_query($kon, "SELECT * FROM proses WHERE notransaksi = '$data[notransaksi]'");
+                                                    $total = 0;
+                                                    while ($row = mysqli_fetch_array($kuku)) {
+                                                        $total += $row['biaya'];
+                                                    }; echo number_format($total,0,'.','.');
+                                                    ?></td>
                                                     <td>
                                                     <a href="service_edit.php?notransaksi=<?php echo $data['notransaksi']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                                                     <a href="delete.php?notransaksi=<?php echo $data['notransaksi'] ?>&m=masuk" class="btn btn-success btn-sm"><i class="fa fa-trash"></i></a>

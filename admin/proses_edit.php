@@ -26,6 +26,10 @@
                                 <label>Keterangan</label>
                                 <input class="form-control" name="ket" value="<?= $data['ket'] ?>" required>
                             </div>
+                            <div class="form-group">
+                                <label>Biaya (Rp)</label>
+                                <input class="form-control" type="number" name="biaya" value="<?= $data['biaya'] ?>" required>
+                            </div>
                             <button type="submit" name="simpan" class="btn btn-outline btn-primary"><i class="fa fa-check-square"></i> Ubah</button>
                             <button type="reset" class="btn btn-outline btn-default"><i class="fa fa-refresh"></i> Ulangi</button>
                         </form>
@@ -45,10 +49,11 @@
 <?php require('bawah.php') ?>
 <?php
   if (isset($_POST['simpan'])) {
-    $waktu   = $_REQUEST['waktu'];
-    $ket    = $_REQUEST['ket'];
+    $waktu = $_REQUEST['waktu'];
+    $ket   = $_REQUEST['ket'];
+    $biaya = $_REQUEST['biaya'];
 
-    $ubah = mysqli_query($kon,"UPDATE proses SET waktu = '$waktu', ket = '$ket' WHERE idproses = '$idproses'");
+    $ubah = mysqli_query($kon,"UPDATE proses SET waktu = '$waktu', ket = '$ket', biaya = '$biaya' WHERE idproses = '$idproses'");
     if($ubah){
       ?> <script>alert("Berhasil Diubah");window.location='proses.php';</script> <?php
     }else{

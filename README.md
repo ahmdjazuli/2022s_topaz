@@ -13,6 +13,11 @@ Bahasa Pemograman :
 2. Javascript
 3. CSS
 
+PEMBAHARUAN 2 :
+1. Menu Depan -> Lokasi dan Galeri.
+2. Pemesanan Sparepart.
+3. Proses Service ada kolom biaya.
+
 PEMBAHARUAN :
 1. Jadwal Maintenance -> (Input & Edit) Nama Instansi ga Manual lagi.
 					  -> (Report) Kolom Nama Instansi ditambahkan.
@@ -25,7 +30,7 @@ Fitur Website :
 3. Multi User (Admin, Karyawan dan Customer) (3)
 4. Halaman Utama (Login)
 5. Data Master terdiri dari : Data Karyawan, Customer dan Alat. (2)
-6. Data Report terdiri dari : Laporan Barang Masuk, Quality Check, Barang Keluar, Gaji Karyawan, Service/Keluhan, Proses Service, Report Service, Pendapatan Harian, Pendapatan Bulanan dan Cetak Nota (10)
+6. Data Report terdiri dari : Laporan Barang Masuk, Quality Check, Barang Keluar, Gaji Karyawan, Transaksi Service, Proses Service, Report Service, Pendapatan Harian, Pendapatan Bulanan dan Cetak Nota (10)
 7. Alert Standar
 8. CRUD Standar
 9. Grafik (Tidak Tersedia)

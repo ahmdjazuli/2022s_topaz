@@ -47,7 +47,8 @@
                               <a class="nav-item nav-link" href="profil.php?id=<?=$memori['id'] ?>">Profil <b><?= $memori['nama'] ?></b></a>
                               <a class="nav-item nav-link" href="keluar.php">Keluar</a>
                            <?php }else{ ?>
-                           <!-- <a class="nav-item nav-link" href="lokasi.php">Lokasi</a> -->
+                              <a class="nav-item nav-link" href="galeri.php">Galeri</a>
+                              <a class="nav-item nav-link" href="lokasi.php">Lokasi</a>
                               <a class="nav-item nav-link" href="masuk.php">Login</a>
                            <?php } ?>
                         </div>

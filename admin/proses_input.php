@@ -38,6 +38,10 @@
                                 <label>Keterangan</label>
                                 <input class="form-control" type="text" name="ket" required>
                             </div>
+                            <div class="form-group">
+                                <label>Biaya (Rp)</label>
+                                <input class="form-control" type="number" name="biaya">
+                            </div>
                             <button type="submit" name="simpan" class="btn btn-success"><i class="fa fa-check-square"></i> Simpan</button>
                             <button type="reset" class="btn btn-success"><i class="fa fa-refresh"></i> Ulangi</button>
                         </form>
@@ -57,6 +61,7 @@
                                         <th>No</th>
                                         <th>Waktu (WITA)</th>
                                         <th>Keterangan</th>
+                                        <th>Biaya (Rp)</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
@@ -67,6 +72,7 @@
                                                 <td><?= $no++; ?></td>
                                                 <td><?= date('d/m/Y,H:i',strtotime($data['waktu'])) ?></td>
                                                 <td><?= $data['ket'] ?></td>
+                                                <td><?= number_format($data['biaya'],0,'.','.'); ?></td>
                                                 <td>
                                                     <a href="proses_input.php?idproses=<?php echo $data['idproses'] ?>&notransaksi=<?= $notransaksi ?>" class="btn btn-success btn-sm"><i class="fa fa-trash"></i></a>
                                                 </td>
@@ -94,7 +100,7 @@
     $waktu    = $_REQUEST['waktu'];
     $ket      = $_REQUEST['ket'];
 
-    $tambah = mysqli_query($kon,"INSERT INTO proses(waktu,ket,notransaksi) VALUES ('$waktu','$ket','$notransaksi')");
+    $tambah = mysqli_query($kon,"INSERT INTO proses(biaya,waktu,ket,notransaksi) VALUES ('$biaya','$waktu','$ket','$notransaksi')");
     if($tambah){
       ?> <script>window.location='proses_input.php?notransaksi=<?=$notransaksi?>';</script> <?php
     }else{

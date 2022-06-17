@@ -48,7 +48,13 @@ while( $data = mysqli_fetch_array($result) ) :
     <td><?= $data['namap'] ?></td>
     <td><?= $data['kerusakan'] ?></td>
     <td><?= $data['solusi'] ?></td>
-    <td><?= number_format($data['biaya'],0,'.','.') ?></td>
+    <td><?php
+    $kuku = mysqli_query($kon, "SELECT * FROM proses WHERE notransaksi = '$data[notransaksi]'");
+    $total = 0;
+    while ($row = mysqli_fetch_array($kuku)) {
+        $total += $row['biaya'];
+    }; echo number_format($total,0,'.','.');
+    ?></td>
 </tr>
 <?php endwhile; ?>
   </table>

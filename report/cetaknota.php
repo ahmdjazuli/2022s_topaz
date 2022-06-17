@@ -44,18 +44,25 @@
     <td><?= $now['namabarang'] ?></td>
 	<td><?= $now['kerusakan'] ?></td>
     <td><?= $now['solusi'] ?></td>
-    <td><?= number_format($now['biaya'],0,'.','.')  ?></td>
+    <td><?php
+    $kuku = mysqli_query($kon, "SELECT * FROM proses WHERE notransaksi = '$now[notransaksi]'");
+    $total = 0;
+    while ($row = mysqli_fetch_array($kuku)) {
+        $total += $row['biaya'];
+    }; echo number_format($total,0,'.','.');
+    ?></td>
 </tr>
   </table>
 
 <div class="container">
-	<div style="width: 45%; float: LEFT;">
+	<div style="width: 55%; float: LEFT;">
   <table class="table table-bordered table-sm" border="1px" style="font-weight: 400;">
     <thead class="text-center">
         <tr>
             <th>No</th>
             <th>Waktu (WITA)</th>
             <th>Keterangan</th>
+            <th>Biaya (Rp)</th>
         </tr>
     </thead>
 		<tbody>
@@ -65,12 +72,13 @@
                 <td><?= $no++; ?></td>
                 <td><?= date('d/m/Y,H:i',strtotime($data['waktu'])) ?></td>
                 <td><?= $data['ket'] ?></td>
+                <td><?= number_format($data['biaya'],0,'.','.') ?></td>
                 </tr>
         <?php } ?>
 		</tbody>
   </table>
   </div>
-  <div style="float: RIGHT; width: 52%;">
+  <div style="float: RIGHT; width: 42%;">
   	Petunjuk atau Catatan :
   <ol>
   	<li style="font-weight: normal;">Pengembalian Service harus disertai dengan Nota.</li>

@@ -68,6 +68,8 @@
                                         <th>No Transaksi</th>
                                         <th>Waktu (WITA)</th>
                                         <th>Keterangan</th>
+                                        <th>Pemesanan Sparepart</th>
+                                        <th>Biaya (Rp.)</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
@@ -79,6 +81,19 @@
                                                     <td><?= $data['notransaksi'] ?></td>
                                                     <td><?= date('d/m/Y,H:i',strtotime($data['waktu'])) ?></td>
                                                     <td><?= $data['ket'] ?></td>
+                                                    <td><?php
+                                                    if($data['ket']!='Selesai'){ ?>
+                                                        <a href="sparepart_input.php?idproses=<?= $data['idproses'] ?>" class="btn btn-success">+</a>
+                                                    <?php }else{
+                                                        echo '-';
+                                                    }
+                                                    $koko = mysqli_query($kon, "SELECT * FROM sparepart WHERE idproses = '$data[idproses]'");
+                                                    if(mysqli_num_rows($koko) > 0){ ?>
+                                                        <a href="sparepart.php" class="btn" style="background-color: #01633c;color:white"><i class="fa fa-check"></i></a>
+                                                    <?php }
+                                                     ?>
+                                                    </td>
+                                                    <td><?= number_format($data['biaya'],0,'.','.') ?></td>
                                                     <td>
                                                         <a href="proses_edit.php?idproses=<?php echo $data['idproses']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                                                         <a href="proses.php?idproses=<?= $data['idproses']?>" class="btn btn-success btn-sm"><i class="fa fa-trash"></i></a>

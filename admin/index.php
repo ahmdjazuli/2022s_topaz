@@ -1,4 +1,5 @@
 <?php require('atas.php'); 
+    $sparepart     = mysqli_num_rows(mysqli_query($kon, "SELECT * FROM sparepart"));
     $transaksi     = mysqli_num_rows(mysqli_query($kon, "SELECT * FROM transaksi"));
     $gaji          = mysqli_num_rows(mysqli_query($kon, "SELECT * FROM gaji"));
     $qc            = mysqli_num_rows(mysqli_query($kon, "SELECT * FROM qc"));
@@ -93,6 +94,17 @@
                     <div class="text">
                         <span class="value"><?= $proses ?></span>
                         <label class="text-muted"><a style="color: white;" href="proses.php">Proses Service</a></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="hero-widget well well-sm yayaya">
+                    <div class="icon">
+                        <i class="fa fa-flag"></i>
+                    </div>
+                    <div class="text">
+                        <span class="value"><?= $sparepart ?></span>
+                        <label class="text-muted"><a style="color: white;" href="sparepart.php">Pemesanan Sparepart</a></label>
                     </div>
                 </div>
             </div>

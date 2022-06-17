@@ -214,10 +214,10 @@ button {
 .header_section{
 	width: 100%;
 	float: left;
-	background-image: url(../images/banner.png);
+	background-image: url(../images/pexels-oleksandr-tiupa-192136.jpg);
 	height: auto;
 	padding: 20px 0px;
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
@@ -417,8 +417,6 @@ body{
 	width: 100%;
 	float: left;
 	text-align: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
 	margin: 0px;
 }
 
@@ -459,8 +457,6 @@ body{
 	width: 100%;
 	float: left;
 	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 40px;
 	margin: 0px
 }
 
@@ -481,9 +477,7 @@ body{
     float: left;
     background-color: #eae7e7;
     height: auto;
-    padding-top: 70px;
     background-size: 100%;
-    padding-bottom: 70px;
 }
 .shoes-img3{ width: 100%; float: left; text-align: center; }
 
@@ -502,7 +496,7 @@ body{
 	width: 100%;
 	float: left;
 	font-size: 35pt;
-	color: #ed2540;
+	color: #01633c;
 	line-height: 50px;
 }
 
@@ -510,7 +504,7 @@ body{
 	width: 100%;
 	float: left;
 	font-size: 45pt;
-	color: #ed2540;
+	color: #01633c;
 	line-height: 75px;
 
 }
