@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2022 at 03:53 AM
+-- Generation Time: Jun 17, 2022 at 02:06 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -219,28 +219,29 @@ CREATE TABLE `proses` (
   `idproses` int(5) NOT NULL,
   `notransaksi` varchar(10) NOT NULL,
   `waktu` datetime NOT NULL,
-  `ket` varchar(100) NOT NULL
+  `ket` varchar(100) NOT NULL,
+  `biaya` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `proses`
 --
 
-INSERT INTO `proses` (`idproses`, `notransaksi`, `waktu`, `ket`) VALUES
-(1, '2022060839', '2022-06-01 02:53:00', 'Pembersihan Alat Medis pada bagian fisik dan mekanik'),
-(2, '2022060839', '2022-06-01 08:09:00', 'Small Repair'),
-(3, '2022060839', '2022-06-01 10:10:00', 'Kalibrasi Internal'),
-(4, '2022060839', '2022-06-02 08:10:00', 'Selesai'),
-(5, '2022060812', '2022-06-02 23:12:00', 'Pembersihan Alat Medis pada bagian fisik dan mekanik'),
-(6, '2022060812', '2022-06-03 23:12:00', 'Pengecekkan serta oergantian sekring apabila rusak/bermasalah.'),
-(7, '2022060812', '2022-06-04 17:13:00', 'Ganti suku cadang'),
-(8, '2022060812', '2022-06-04 20:14:00', 'Selesai'),
-(9, '2022060822', '2022-06-09 02:16:00', 'Pemeliharaan dan Perawatan suku cadang'),
-(10, '2022060822', '2022-06-09 08:17:00', 'Pelumasan bagian mekanik alat yang bergerak'),
-(11, '2022060822', '2022-06-09 10:17:00', 'Selesai'),
-(12, '2022060841', '2022-06-03 23:21:00', 'Selesai'),
-(13, '2022060808', '2022-06-05 23:22:00', 'Cleaning'),
-(14, '2022060808', '2022-06-06 23:22:00', 'Selesai');
+INSERT INTO `proses` (`idproses`, `notransaksi`, `waktu`, `ket`, `biaya`) VALUES
+(1, '2022060839', '2022-06-01 02:53:00', 'Pembersihan Alat Medis pada bagian fisik dan mekanik', 500000),
+(2, '2022060839', '2022-06-01 08:09:00', 'Small Repair', 750000),
+(3, '2022060839', '2022-06-01 10:10:00', 'Kalibrasi Internal', 500000),
+(4, '2022060839', '2022-06-02 08:10:00', 'Selesai', 0),
+(5, '2022060812', '2022-06-02 23:12:00', 'Pembersihan Alat Medis pada bagian fisik dan mekanik', 400000),
+(6, '2022060812', '2022-06-03 23:12:00', 'Pengecekkan serta oergantian sekring apabila rusak/bermasalah.', 100000),
+(7, '2022060812', '2022-06-04 17:13:00', 'Ganti suku cadang', 60000),
+(8, '2022060812', '2022-06-04 20:14:00', 'Selesai', 0),
+(9, '2022060822', '2022-06-09 02:16:00', 'Pemeliharaan dan Perawatan suku cadang', 250000),
+(10, '2022060822', '2022-06-09 08:17:00', 'Pelumasan bagian mekanik alat yang bergerak', 200000),
+(11, '2022060822', '2022-06-09 10:17:00', 'Selesai', 0),
+(12, '2022060841', '2022-06-03 23:21:00', 'Selesai', 2000000),
+(13, '2022060808', '2022-06-05 23:22:00', 'Cleaning', 300000),
+(14, '2022060808', '2022-06-06 23:22:00', 'Selesai', 0);
 
 -- --------------------------------------------------------
 
@@ -345,6 +346,28 @@ INSERT INTO `servicereport` (`id`, `tgl`, `ket`, `file`) VALUES
 (5, '2022-02-10', 'Hasil Service', '821contoh.kwitansi.kosong.doc.docx'),
 (6, '2022-02-18', 'Hasil Service', '945informasi.penjelasan.tatacara.ujian...1..docx'),
 (7, '2022-02-15', 'Hasil Service', '696informasi.penjelasan.tatacara.ujian...1..docx');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sparepart`
+--
+
+CREATE TABLE `sparepart` (
+  `idsparepart` int(5) NOT NULL,
+  `idproses` int(5) NOT NULL,
+  `waktu` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `barangnya` varchar(100) NOT NULL,
+  `jumlahnya` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sparepart`
+--
+
+INSERT INTO `sparepart` (`idsparepart`, `idproses`, `waktu`, `barangnya`, `jumlahnya`) VALUES
+(2, 7, '2022-06-17 03:35:28', 'Air Tube Set', 130),
+(3, 10, '2022-06-17 03:36:12', 'Lubricant Oil', 3);
 
 -- --------------------------------------------------------
 
@@ -505,6 +528,13 @@ ALTER TABLE `servicereport`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sparepart`
+--
+ALTER TABLE `sparepart`
+  ADD PRIMARY KEY (`idsparepart`),
+  ADD KEY `idproses` (`idproses`);
+
+--
 -- Indexes for table `stok`
 --
 ALTER TABLE `stok`
@@ -576,6 +606,12 @@ ALTER TABLE `servicereport`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `sparepart`
+--
+ALTER TABLE `sparepart`
+  MODIFY `idsparepart` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `stok`
 --
 ALTER TABLE `stok`
@@ -634,6 +670,12 @@ ALTER TABLE `proses`
 --
 ALTER TABLE `qc`
   ADD CONSTRAINT `qc_ibfk_1` FOREIGN KEY (`idmasuk`) REFERENCES `masuk` (`idmasuk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sparepart`
+--
+ALTER TABLE `sparepart`
+  ADD CONSTRAINT `sparepart_ibfk_1` FOREIGN KEY (`idproses`) REFERENCES `proses` (`idproses`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transaksi`
