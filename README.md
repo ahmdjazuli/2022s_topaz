@@ -30,7 +30,7 @@ Fitur Website :
 3. Multi User (Admin, Karyawan dan Customer) (3)
 4. Halaman Utama (Login)
 5. Data Master terdiri dari : Data Karyawan, Customer dan Alat. (2)
-6. Data Report terdiri dari : Laporan Barang Masuk, Quality Check, Barang Keluar, Gaji Karyawan, Transaksi Service, Proses Service, Report Service, Pendapatan Harian, Pendapatan Bulanan dan Cetak Nota (10)
+6. Data Report terdiri dari : Laporan Barang Masuk, Quality Check, Barang Keluar, Gaji Karyawan, Transaksi Service, Proses Service, Pemesanan Sparepart, Report Service, Pendapatan Harian, Pendapatan Bulanan dan Cetak Nota (11)
 7. Alert Standar
 8. CRUD Standar
 9. Grafik (Tidak Tersedia)
