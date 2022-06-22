@@ -40,6 +40,8 @@
 
                 <ul class="nav navbar-nav navbar-left navbar-top-links">
                     <li><a href="../index.php" target="_blank"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                    <li><a href="galeri.php"><i class="fa fa-photo fa-fw"></i> Galeri</a></li>
+                    <li><a href="visimisi.php"><i class="fa fa-sliders fa-fw"></i> Visi Misi</a></li>
                 </ul>
 
                 <ul class="nav navbar-right navbar-top-links">
