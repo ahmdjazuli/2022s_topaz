@@ -20,8 +20,8 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <br>
-        <br>
         <!-- /.row -->
+        <h1>PT. Topaz</h1>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="../images/1.jpg" width="300px">
@@ -31,6 +31,9 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="../images/3.jpg" width="300px">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 20px;">
+                <img src="../images/gg.jpeg" width="300px" height="225px">
             </div>
         </div>
     </div>
