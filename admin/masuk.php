@@ -71,7 +71,7 @@
                                         <th>Nama Barang</th>
                                         <th>Supplier</th>
                                         <th>Jumlah</th>
-                                        <th>Harga (Rp)</th>
+                                        <th>Harga</th>
                                         <th>Status</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
@@ -85,7 +85,7 @@
                                                     <td><?= $data['namastok'] ?></td>
                                                     <td><?= $data['distributor'] ?></td>
                                                     <td><?= $data['jumlah'] ?></td>
-                                                    <td><?= number_format($data['harga'],0,'.','.') ?></td>
+                                                    <td>Rp. <?= number_format($data['harga'],0,'.','.') ?></td>
                                                     <td><?php 
                                                       $idmasuk = $data['idmasuk'];
                                                       $lah = mysqli_query($kon, "SELECT * FROM qc WHERE idmasuk = '$idmasuk'");

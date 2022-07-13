@@ -34,7 +34,7 @@ require "../kon.php";
         <th>Keterangan</th>
         <th>Barang yang Dipesan</th>
         <th>Jumlah</th>
-        <th>Harga (Rp)</th>
+        <th>Biaya</th>
       </tr>
     </thead>
 <?php 
@@ -51,7 +51,7 @@ while( $data = mysqli_fetch_array($result) ) :
     <td><?php
     $kuku = mysqli_query($kon, "SELECT * FROM proses WHERE idproses = '$data[idproses]'");
     $row = mysqli_fetch_array($kuku);
-    echo number_format($row['biaya'],0,'.','.');
+    echo 'Rp. '.number_format($row['biaya'],0,'.','.');
     ?></td>
 </tr>
 <?php endwhile; ?>

@@ -70,7 +70,7 @@
                                         <th>Keterangan</th>
                                         <th>Barang yang Dipesan</th>
                                         <th>Jumlah</th>
-                                        <th>Biaya (Rp)</th>
+                                        <th>Biaya</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
@@ -87,7 +87,7 @@
                                                     <td><?php
                                                     $kuku = mysqli_query($kon, "SELECT * FROM proses WHERE idproses = '$data[idproses]'");
                                                     $row = mysqli_fetch_array($kuku);
-                                                    echo number_format($row['biaya'],0,'.','.');
+                                                    echo 'Rp. '.number_format($row['biaya'],0,'.','.');
                                                     ?></td>
                                                     <td>
                                                         <a href="sparepart_edit.php?idsparepart=<?php echo $data['idsparepart']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>

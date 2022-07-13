@@ -69,7 +69,7 @@
                                         <th>No</th>
                                         <th>Tanggal</th>
                                         <th>Nama Karyawan</th>
-                                        <th>Gaji(Rp)</th>
+                                        <th>Gaji</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
@@ -80,7 +80,7 @@
                                                     <td><?= $no++; ?></td>
                                                     <td><?= tgl_indo($data['tgl']) ?></td>
                                                     <td><?= $data['nama'] ?></td>
-                                                    <td><?= number_format($data['total'],0,'.','.') ?></td>
+                                                    <td>Rp. <?= number_format($data['total'],0,'.','.') ?></td>
                                                     <td>
                                                         <a href="gaji_edit.php?idgaji=<?php echo $data['idgaji']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                                                         <a href="delete.php?idgaji=<?php echo $data['idgaji'] ?>" class="btn  btn-success btn-sm"><i class="fa fa-trash"></i></a>

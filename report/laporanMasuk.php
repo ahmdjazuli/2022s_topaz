@@ -35,7 +35,7 @@ require "../kon.php";
         <th>Nama Barang</th>
         <th>Distributor</th>
         <th>Jumlah</th>
-        <th>Harga (Rp)</th>
+        <th>Harga</th>
       </tr>
     </thead>
 <?php 
@@ -48,7 +48,7 @@ while( $data = mysqli_fetch_array($result) ) :
     <td><?= $data['namastok'] ?></td>
     <td><?= $data['distributor'] ?></td>
     <td><?= $data['jumlah'] ?></td>
-    <td><?= number_format($data['harga'],0,'.','.') ?></td>
+    <td>Rp. <?= number_format($data['harga'],0,'.','.') ?></td>
 </tr>
 <?php endwhile; ?>
   </table>

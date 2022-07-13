@@ -13,6 +13,9 @@ Bahasa Pemograman :
 2. Javascript
 3. CSS
 
+PEMBAHARUAN 3 :
+1. Semua yg ada harganya jadi pake Rp.
+
 PEMBAHARUAN 2 :
 1. Menu Depan -> Lokasi dan Galeri.
 2. Pemesanan Sparepart.

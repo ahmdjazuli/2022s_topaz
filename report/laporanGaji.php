@@ -33,7 +33,7 @@ require "../kon.php";
         <th>No</th>
         <th>Tanggal</th>
         <th>Nama Karyawan</th>
-        <th>Total (Rp)</th>
+        <th>Gaji</th>
       </tr>
     </thead>
 <?php 
@@ -44,7 +44,7 @@ while( $data = mysqli_fetch_array($result) ) :
   	<td><?= $i++; ?></td>
   	<td><?= tgl_indo($data['tgl']) ?></td>
     <td><?= $data['nama'] ?></td>
-    <td><?= number_format($data['total'],0,'.','.') ?></td>
+    <td>Rp. <?= number_format($data['total'],0,'.','.') ?></td>
 </tr>
 <?php endwhile; ?>
   </table>

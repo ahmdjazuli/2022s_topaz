@@ -19,7 +19,7 @@
                                         <th>Merk</th>
                                         <th>Tipe</th>
                                         <th>Jumlah</th>
-                                        <th>Harga Jual (Rp)</th>
+                                        <th>Harga Jual</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
@@ -32,7 +32,7 @@
                                                     <td><?= $data['merk'] ?></td>
                                                     <td><?= $data['tipe'] ?></td>
                                                     <td><?= $data['jumlahnya'] ?></td>
-                                                    <td><?= number_format($data['harganya'],0,'.','.') ?></td>
+                                                    <td>Rp. <?= number_format($data['harganya'],0,'.','.') ?></td>
                                                     <td>
                                                         <a href="stok_edit.php?idstok=<?php echo $data['idstok']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                                                         <a href="delete.php?idstok=<?php echo $data['idstok'] ?>" class="btn btn-success btn-sm"><i class="fa fa-trash"></i></a>

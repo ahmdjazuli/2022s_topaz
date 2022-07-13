@@ -34,7 +34,7 @@ require "../kon.php";
         <th>No Transaksi</th>
         <th>Waktu (WITA)</th>
         <th>Keterangan</th>
-        <th>Biaya (Rp)</th>
+        <th>Biaya</th>
       </tr>
     </thead>
 <?php 
@@ -46,7 +46,7 @@ while( $data = mysqli_fetch_array($result) ) :
   	<td><?= $data['notransaksi'] ?></td>
     <td><?= date('d/m/Y,H:i',strtotime($data['waktu'])) ?></td>
     <td><?= $data['ket'] ?></td>
-    <td><?= number_format($data['biaya'],0,'.','.') ?></td>
+    <td>Rp. <?= number_format($data['biaya'],0,'.','.') ?></td>
 </tr>
 <?php endwhile; ?>
   </table>

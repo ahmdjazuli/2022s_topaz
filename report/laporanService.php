@@ -53,7 +53,7 @@ while( $data = mysqli_fetch_array($result) ) :
     $total = 0;
     while ($row = mysqli_fetch_array($kuku)) {
         $total += $row['biaya'];
-    }; echo number_format($total,0,'.','.');
+    }; echo 'Rp. '.number_format($total,0,'.','.');
     ?></td>
 </tr>
 <?php endwhile; ?>

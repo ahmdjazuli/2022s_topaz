@@ -69,7 +69,7 @@
                                         <th>Waktu (WITA)</th>
                                         <th>Keterangan</th>
                                         <th>Pemesanan Sparepart</th>
-                                        <th>Biaya (Rp.)</th>
+                                        <th>Biaya</th>
                                         <th><i class="fa fa-toggle-on"></i></th>
                                     </tr>
                                 </thead>
@@ -93,7 +93,7 @@
                                                     <?php }
                                                      ?>
                                                     </td>
-                                                    <td><?= number_format($data['biaya'],0,'.','.') ?></td>
+                                                    <td>Rp. <?= number_format($data['biaya'],0,'.','.') ?></td>
                                                     <td>
                                                         <a href="proses_edit.php?idproses=<?php echo $data['idproses']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                                                         <a href="proses.php?idproses=<?= $data['idproses']?>" class="btn btn-success btn-sm"><i class="fa fa-trash"></i></a>

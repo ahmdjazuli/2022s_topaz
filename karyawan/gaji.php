@@ -68,7 +68,7 @@
                                         <th>No</th>
                                         <th>Tanggal</th>
                                         <th>Nama Karyawan</th>
-                                        <th>Gaji(Rp)</th>
+                                        <th>Gaji</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -78,7 +78,7 @@
                                                     <td><?= $no++; ?></td>
                                                     <td><?= tgl_indo($data['tgl']) ?></td>
                                                     <td><?= $data['nama'] ?></td>
-                                                    <td><?= number_format($data['total'],0,'.','.') ?></td>
+                                                    <td>Rp. <?= number_format($data['total'],0,'.','.') ?></td>
                                                 </tr>
                                         <?php } ?>
                                           
