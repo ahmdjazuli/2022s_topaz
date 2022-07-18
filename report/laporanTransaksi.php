@@ -10,7 +10,7 @@ require "../kon.php";
 ?>
 <?php require('atas.php') ?>
 <style type="text/css" media="print"> @page { size: landscape; } </style>
-<h2 style="text-align: center;">Laporan Transaksi</h2>
+<h2 style="text-align: center;">Laporan Barang Keluar</h2>
 <h4 style="text-align: center;">
 	<?php 
 		if($bulan AND $tahun){
